@@ -1,0 +1,106 @@
+<p>step-zero-visual-panel works!</p>
+
+<div id="visualPanel">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <i class="fa fa-eye"></i>
+        &nbsp;VISUAL_PANEL
+      </h3>
+    </div>
+    <div class="panel-body">
+      <!-- lines -->
+      <ul class="list-group">
+        <!-- <li class="list-group-item" *ngFor="let lines of line; index as i"> -->
+        <li class="list-group-item">
+          <!-- columns -->
+          <div>
+            <div class="row linesList">
+              <div class="col-md-12 lineCommandButtons">
+                <button mat-button color="warn" (click)="upThisLine('index')">
+                  <i class="fa fa-arrow-up"></i>
+                </button>
+                <button mat-button color="warn" (click)="downThisLine('index')">
+                  <i class="fa fa-arrow-down"></i>
+                </button>
+                <button mat-fab color="warn" (click)="downThisLine('index')">
+                  <i class="fa fa-trash-o"></i>
+                </button>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-12 well">
+                  <button mat-button disabled>
+                    <!-- {{line.columns[0].control.type !== 'none'  ? line.columns[0].control.type + ' ' + line.columns[0].control.subtype || '' : 'column 1'}} -->
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row linesList">
+              <div class="col-md-12 lineCommandButtons">
+                <button mat-button color="warn" (click)="upThisLine('index')">
+                  <i class="fa fa-arrow-up"></i>
+                </button>
+                <button mat-button color="warn" (click)="downThisLine('index')">
+                  <i class="fa fa-arrow-down"></i>
+                </button>
+                <button
+                  mat-button
+                  color="warn"
+                  (click)="removeThisLine('index')"
+                >
+                  <i class="fa fa-trash-o"></i>
+                </button>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-6 well">
+                  <button mat-button disabled>
+                    <!-- {{line.columns[0].control.type !== 'none'  ? line.columns[0].control.type + ' ' + line.columns[0].control.subtype || '' : 'column 1'}} -->
+                  </button>
+                </div>
+                <div class="col-md-6 well">
+                  <button mat-button disabled>
+                    <!-- {{line.columns[1].control.type !== 'none'  ? line.columns[1].control.type + ' ' + line.columns[1].control.subtype || '' : 'column 2'}} -->
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row linesList">
+              <div class="col-md-12 lineCommandButtons">
+                <button mat-button color="warn" (click)="upThisLine('index')">
+                  <i class="fa fa-arrow-up"></i>
+                </button>
+                <button mat-button color="warn" (click)="downThisLine('1')">
+                  <i class="fa fa-arrow-down"></i>
+                </button>
+                <button
+                  mat-button
+                  color="warn"
+                  (click)="removeThisLine('index')"
+                >
+                  <i class="fa fa-trash-o"></i>
+                </button>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-4 well">
+                  <button mat-button disabled>
+                    <!-- {{line.columns[0].control.type !== 'none'  ? line.columns[0].control.type + ' ' + line.columns[0].control.subtype || '' : 'column 1'}} -->
+                  </button>
+                </div>
+                <div class="col-md-4 well">
+                  <button mat-button disabled>
+                    <!-- {{line.columns[1].control.type !== 'none'  ? line.columns[1].control.type + ' ' + line.columns[1].control.subtype || '' : 'column 2'}} -->
+                  </button>
+                </div>
+                <div class="col-md-4 well">
+                  <button mat-button disabled>
+                    <!-- {{line.columns[2].control.type !== 'none'  ? line.columns[2].control.type + ' ' + line.columns[2].control.subtype || '' : 'column 3'}} -->
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
