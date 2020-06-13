@@ -12,6 +12,10 @@ export class ControlDialogComponent implements OnInit {
 
   controlTypes = ['text', 'textarea', 'select', 'radio', 'checkbox'];
   controlForm: FormGroup;
+  controlRequired;
+  labelText;
+  controlType;
+  hint;
   constructor(
     public dialogRef: MatDialogRef<ControlDialogComponent>,
     private fb: FormBuilder

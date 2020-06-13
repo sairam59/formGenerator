@@ -77,11 +77,18 @@ export class FormHelperService {
           row.isSelected = true;
           row.cols.forEach((element, j) => {
             if (this.colIndex === j) {
-              element = columnCtrl;
+              console.log('columnCtrl', columnCtrl);
+              element.col = columnCtrl.col;
+              element.controlType = columnCtrl.controlType;
+              element.isRequired = columnCtrl.isRequired;
+              element.labelText = columnCtrl.labelText;
+              element.hint = columnCtrl.hint;
             }
           });
+          console.log('rows', row.cols);
         }
       });
     }
+    console.log('rows', this.rows);
   }
 }

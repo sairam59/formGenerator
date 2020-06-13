@@ -34,7 +34,7 @@ export class ControlColsComponent implements OnInit {
         this.formService.rowIndex = rowIndex;
         this.formService.colIndex = colIndex;
         this.formService.addControlInColumn(result);
-        this.changeDetectorRef.detectChanges();
+        //this.changeDetectorRef.detectChanges();
       }
     });
   }

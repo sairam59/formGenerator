@@ -23,6 +23,7 @@ import { ColsComponent } from './cols/cols.component';
 import { FormContainerComponent } from './form-container/form-container.component';
 import { ControlColsComponent } from './control-cols/control-cols.component';
 import { ControlDialogComponent } from './control-dialog/control-dialog.component';
+import { FinalFormLayoutComponent } from './final-form-layout/final-form-layout.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ControlDialogComponent } from './control-dialog/control-dialog.componen
     FormContainerComponent,
     ControlColsComponent,
     ControlDialogComponent,
+    FinalFormLayoutComponent,
   ],
   imports: [
     BrowserModule,
