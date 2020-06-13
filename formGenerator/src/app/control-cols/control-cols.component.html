@@ -1,0 +1,41 @@
+<div class="container-fluid mt-3 mb-3">
+    <div class="row">
+        <div class="col-3">
+            <mat-card>
+                <h1>Column - Control mapping</h1>
+                <ul class="list-group">
+                    <li class="list-group-item">Select column for control selection</li>
+                    <li class="list-group-item">Fill in appropriate details to make a valid control</li>
+                </ul>
+            </mat-card>
+        </div>
+        <div class="col-9">
+            <mat-card>
+                <div class="container-fluid">
+                    <ng-container *ngFor="let row of formService.rows;let i = index">
+                        <div class="row">
+                            <div class="col">
+                                <mat-checkbox color="primary" (change)="selectedRow($event, i)"
+                                    [labelPosition]="'after'" class="d-block float-left">
+                                    Select Row
+                                </mat-checkbox>
+                                <button type="button" class="float-right" mat-icon-button color="warn"
+                                    (click)="formService.deleteRow(i)">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row bg-secondary p-2 mt-3">
+                            <div class="col p-2 mr-2" *ngFor="let col of row.cols; let j = index">
+                                <button class="btn btn-primary btn-lg btn-block" (click)="openControlDialog(i,j)">Column
+                                    {{j+1}} {{col?.controlType}} </button>
+                            </div>
+                        </div>
+                        <hr>
+                    </ng-container>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

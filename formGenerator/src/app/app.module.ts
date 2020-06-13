@@ -4,29 +4,54 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// Material Modules
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
-import { StepZeroCommandPanelComponent } from './stepZeroContent/step-zero-command-panel/step-zero-command-panel.component';
-import { StepZeroVisualPanelComponent } from './stepZeroContent/step-zero-visual-panel/step-zero-visual-panel.component';
-import { StepIndicatorComponent } from './stepsIndicator/step-indicator/step-indicator.component';
-import { PagerComponent } from './stepsIndicator/pager/pager.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+// Components
+import { RowsComponent } from './rows/rows.component';
+import { ColsComponent } from './cols/cols.component';
+import { FormContainerComponent } from './form-container/form-container.component';
+import { ControlColsComponent } from './control-cols/control-cols.component';
+import { ControlDialogComponent } from './control-dialog/control-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StepZeroCommandPanelComponent,
-    StepZeroVisualPanelComponent,
-    StepIndicatorComponent,
-    PagerComponent,
+    RowsComponent,
+    ColsComponent,
+    FormContainerComponent,
+    ControlColsComponent,
+    ControlDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
+    // Forms modules
     FormsModule,
+    ReactiveFormsModule,
+    // Material modules
+    MatButtonModule,
     MatIconModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

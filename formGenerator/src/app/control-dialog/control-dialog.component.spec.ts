@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepIndicatorComponent } from './step-indicator.component';
+import { ControlDialogComponent } from './control-dialog.component';
 
-describe('StepIndicatorComponent', () => {
-  let component: StepIndicatorComponent;
-  let fixture: ComponentFixture<StepIndicatorComponent>;
+describe('ControlDialogComponent', () => {
+  let component: ControlDialogComponent;
+  let fixture: ComponentFixture<ControlDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StepIndicatorComponent ]
+      declarations: [ ControlDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepIndicatorComponent);
+    fixture = TestBed.createComponent(ControlDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
