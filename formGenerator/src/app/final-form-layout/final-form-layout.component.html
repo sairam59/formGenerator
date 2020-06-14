@@ -5,9 +5,30 @@
     </div>
   </div>
   <div class="row" *ngFor="let row of allRows; let i = index">
-    <div class="col" *ngFor="let col of row; let j = index">
-      <mat-label>{{ col.labelText }}</mat-label>
-      <input matInput placeholder="`{{ col.hint }}`" required />
+    <div class="col" *ngFor="let col of row.cols; let j = index">
+      <!-- <input matInput placeholder="`{{ col.hint }}`" required /> -->
+      <app-form-controls
+        [labelText]="col.labelText"
+        [controlType]="col.controlType"
+        [required]="col.isRequired"
+        [controlName]="col.controlName"
+        [hint]="col.hint"
+      ></app-form-controls>
     </div>
   </div>
 </mat-card>
+<div class="row mt-3 mb-3">
+  <div class="col">
+    <button
+      mat-raised-button
+      class="float-right"
+      color="primary"
+      (click)="generateForm()"
+    >
+      Save
+    </button>
+    <button mat-button class="float-right" color="primary" (click)="onCancel()">
+      Cancel
+    </button>
+  </div>
+</div>

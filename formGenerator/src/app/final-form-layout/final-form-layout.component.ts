@@ -12,5 +12,11 @@ export class FinalFormLayoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.allRows = this.formService.rows;
+    this.allRows.forEach((element) => {
+      console.log('elele', element);
+    });
   }
+
+  generateForm() {}
+  onCancel() {}
 }

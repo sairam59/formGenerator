@@ -10,9 +10,16 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class ControlDialogComponent implements OnInit {
   body: any;
 
-  controlTypes = ['text', 'textarea', 'select', 'radio', 'checkbox'];
+  controlTypes = [
+    'text',
+    'textarea',
+    'select',
+    'radio',
+    'checkbox',
+    'datepicker',
+  ];
   controlForm: FormGroup;
-  controlRequired;
+  controlRequired = true;
   labelText;
   controlType;
   hint;
@@ -26,6 +33,7 @@ export class ControlDialogComponent implements OnInit {
       labelText: [null, Validators.required],
       hint: [null, Validators.required],
       isRequired: [false, Validators.required],
+      controlName: [null, Validators.required],
     });
   }
   onCancel(): void {

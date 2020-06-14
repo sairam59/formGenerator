@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col" *ngIf="controlType === 'text'">
+    <mat-form-field class="full-width-input" appearance="outline">
+      <mat-label>{{ labelText }}</mat-label>
+      <input matInput [required]="required" />
+      <mat-hint>{{ hint }}</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="col" *ngIf="controlType === 'checkbox'">
+    <section class="example-section">
+      <mat-checkbox
+        class="example-margin"
+        [required]="required"
+        [(ngModel)]="checked"
+        >{{ labelText }}</mat-checkbox
+      >
+    </section>
+    <mat-hint>{{ hint }}</mat-hint>
+  </div>
+  <div class="col" *ngIf="controlType === 'select'">
+    <mat-form-field class="full-width-input" appearance="outline">
+      <mat-label>{{ labelText }}</mat-label>
+      <mat-select [required]="required">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-hint>{{ hint }}</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="col" *ngIf="controlType === 'datepicker'">
+    <mat-form-field class="full-width-input" appearance="outline">
+      <mat-label>{{ labelText }}</mat-label>
+      <input matInput [required]="required" [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-hint>{{ hint }}</mat-hint>
+  </div>
+  <div class="col" *ngIf="controlType === 'radio'">
+    <mat-radio-group aria-label="Select an option" [required]="required">
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+    <mat-hint>{{ hint }}</mat-hint>
+  </div>
+  <div class="col" *ngIf="controlType === 'textarea'">
+    <mat-form-field class="full-width-input" appearance="outline">
+      <mat-label>{{ labelText }}</mat-label>
+      <textarea matInput [required]="required"></textarea>
+      <mat-hint>{{ hint }}</mat-hint>
+    </mat-form-field>
+  </div>
+</div>

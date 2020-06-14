@@ -16,6 +16,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 // Components
 import { RowsComponent } from './rows/rows.component';
@@ -24,6 +25,8 @@ import { FormContainerComponent } from './form-container/form-container.componen
 import { ControlColsComponent } from './control-cols/control-cols.component';
 import { ControlDialogComponent } from './control-dialog/control-dialog.component';
 import { FinalFormLayoutComponent } from './final-form-layout/final-form-layout.component';
+import { FormControlsComponent } from './form-controls/form-controls.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import { FinalFormLayoutComponent } from './final-form-layout/final-form-layout.
     ControlColsComponent,
     ControlDialogComponent,
     FinalFormLayoutComponent,
+    FormControlsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,8 @@ import { FinalFormLayoutComponent } from './final-form-layout/final-form-layout.
     MatInputModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatRadioModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
