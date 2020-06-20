@@ -1,34 +1,28 @@
-<mat-card class="mt-3">
-  <div class="row">
+<div class="container-fluid">
+  <mat-card class="mt-3">
+    <div class="row">
+      <div class="col">
+        <h1>Final View</h1>
+      </div>
+    </div>
+    <button mat-raised-button class="mb-3" color="primary" (click)="generateForm()">
+      Generate Code
+    </button>
+    <div class="row" #formGenerated *ngFor="let row of formService.rows; let i = index">
+      <div class="col" *ngFor="let col of row.cols; let j = index">
+        <app-form-controls [labelText]="col.labelText" [controlType]="col.controlType" [required]="col.isRequired"
+          [controlName]="col.controlName" [hint]="col.hint"></app-form-controls>
+      </div>
+    </div>
+  </mat-card>
+  <div class="row mt-3 mb-3">
     <div class="col">
-      <h1>Final View</h1>
+      <button mat-raised-button class="float-right" color="primary" (click)="generateForm()">
+        Save
+      </button>
+      <button mat-button class="float-right" color="primary" (click)="onCancel()">
+        Cancel
+      </button>
     </div>
-  </div>
-  <div class="row" *ngFor="let row of allRows; let i = index">
-    <div class="col" *ngFor="let col of row.cols; let j = index">
-      <!-- <input matInput placeholder="`{{ col.hint }}`" required /> -->
-      <app-form-controls
-        [labelText]="col.labelText"
-        [controlType]="col.controlType"
-        [required]="col.isRequired"
-        [controlName]="col.controlName"
-        [hint]="col.hint"
-      ></app-form-controls>
-    </div>
-  </div>
-</mat-card>
-<div class="row mt-3 mb-3">
-  <div class="col">
-    <button
-      mat-raised-button
-      class="float-right"
-      color="primary"
-      (click)="generateForm()"
-    >
-      Save
-    </button>
-    <button mat-button class="float-right" color="primary" (click)="onCancel()">
-      Cancel
-    </button>
   </div>
 </div>

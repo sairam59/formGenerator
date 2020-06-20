@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  ViewEncapsulation,
+} from '@angular/core';
 import { FormHelperService } from '../form-helper.service';
 
 @Component({
@@ -7,16 +13,14 @@ import { FormHelperService } from '../form-helper.service';
   styleUrls: ['./final-form-layout.component.scss'],
 })
 export class FinalFormLayoutComponent implements OnInit {
-  allRows;
+  @ViewChild('formGenerated') formGenerated: ElementRef;
+
   constructor(public formService: FormHelperService) {}
 
-  ngOnInit(): void {
-    this.allRows = this.formService.rows;
-    this.allRows.forEach((element) => {
-      console.log('elele', element);
-    });
-  }
+  ngOnInit(): void {}
 
-  generateForm() {}
+  generateForm() {
+    console.log(this.formGenerated.nativeElement.innerHTML);
+  }
   onCancel() {}
 }
